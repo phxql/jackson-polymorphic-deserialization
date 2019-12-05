@@ -3,7 +3,7 @@ package de.mkammerer.jpd;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-// Tell Jackson to include a property called 'type', which determines what class is contained
+// Tell Jackson to include a property called 'type', which determines what concrete class is represented by the JSON
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 // You have to list all sub-types of this class here
 @JsonSubTypes({
